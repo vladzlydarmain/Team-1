@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@700&display=swap" rel="stylesheet">
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANGA SHOP</title>
+    <link rel="stylesheet" href="{% static 'appcoolshop/style.css' %}">
+
+
+</head>
+<body>
+    <header class="shapka">
+        
+        <div>
+            <a href="{% url 'main' %}">Main</a>
+        </div>
+
+        <div>
+            <a href="{% url 'catalog' %}">Catalog</a>
+        </div>
+
+        <div>
+            <a href="{% url 'about' %}">About</a>
+        </div>
+<!-- R.I.P. old Eriks classes:( -->
+        <div>
+            <a href="{% url 'feedback' %}">Feedback</a>
+        </div>
+    </header>
+    <main>
+        <div class="name">
+            <h1>Manga Shop</h1>
+        </div>
+        <div class="content">
+            {% block coolBlock %}
+
+            {% endblock %}
+        </div>
+    </main>
+</body>
+</html>
